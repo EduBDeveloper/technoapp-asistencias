@@ -62,14 +62,14 @@ technoapp/
 
 ### 1. Clonar el repositorio
 
-git clone https://github.com/tu-usuario/technoapp.git
-cd technoapp
+git clone https://github.com/tu-usuario/gestion.git
+cd gestion
 2. Configurar la base de datos PostgreSQL
-Crear una base de datos llamada technoapp_db.
+Crear una base de datos llamada gestiondb
 
 2. Ajustar credenciales en application.properties:
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/technoapp_db
+spring.datasource.url=jdbc:postgresql://localhost:5432/gestiondb
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
 spring.jpa.hibernate.ddl-auto=update
