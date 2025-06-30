@@ -6,7 +6,7 @@
 
 Este es un sistema completo de gestión de asistencias técnicas desarrollado con Spring Boot para el backend, PostgreSQL como base de datos y HTML/CSS/JavaScript para el frontend. El sistema permite registrar técnicos, empresas y asistencias, incluyendo funcionalidades de búsqueda, filtros, paginación y edición.
 
----
+------------------------------------------------------------------------------------------------------------------
 
 ## 📌 Características principales
 
@@ -21,44 +21,80 @@ Este es un sistema completo de gestión de asistencias técnicas desarrollado co
   - Total de empresas.
 - Interfaz moderna y adaptable (HTML5, Bootstrap 5, Boxicons).
 
----
+------------------------------------------------------------------------------------------------------------------
 
 ## 🧱 Tecnologías utilizadas
 
-### 🔙 Backend:
-- **Spring Boot** – Framework principal para la API REST.
-- **Spring Web** – Para la gestión de controladores y endpoints REST.
-- **Spring Data JPA** – Para persistencia de datos.
-- **Hibernate** – ORM por defecto de JPA.
-- **PostgreSQL** – Motor de base de datos relacional.
+### 🧠 Backend
+- **Java 17**
+- **Spring Boot 3+**
+  - Spring Web
+  - Spring Data JPA
+  - Spring Validation
+- **PostgreSQL**
+- **Lombok** (para anotaciones como `@Data`, `@Autowired`)
 
 ### 🧑‍🎨 Frontend:
 - **HTML5, CSS3, JavaScript**
 - **Bootstrap 5**
 - **Boxicons / Font Awesome**
 
----
+### 📦 Dependencias
+Revisar el archivo [`pom.xml`](./pom.xml) para ver todas las dependencias.
+
+------------------------------------------------------------------------------------------------------------------
 
 ## 📁 Estructura del proyecto
 
-technoapp/
-├── backend/
-│ ├── controller/
-│ ├── service/
-│ ├── repository/
-│ ├── entities/
-│ └── application.properties
+gestion/
 ├── frontend/
 │ ├── index.html
 │ ├── empresas.html
-│ └── tecnicos.html
-├── db/
-│ └── esquema_postgresql.sql
+│ ├── tecnicos.html
+│ └── img/
+├── src/
+│ └── main/
+│ ├── java/com.coditech.gestion/
+│ │ ├── config/ # Configuraciones globales (CORS)
+│ │ ├── controller/ # Controladores REST
+│ │ ├── dto/ # Objetos de transferencia (dashboard)
+│ │ ├── entities/ # Entidades JPA
+│ │ ├── model/ # Modelos adicionales (ej. Cliente)
+│ │ ├── repository/ # Interfaces JpaRepository
+│ │ └── service/ # Lógica de negocio
+│ ├── resources/
+│ │ ├── application.properties # Configuración de conexión a PostgreSQL
+│ └── GestionApplication.java # Clase principal Spring Boot
+├── pom.xml # Dependencias del proyecto
 
+------------------------------------------------------------------------------------------------------------------
 
----
+🧠 Endpoints REST
+Algunos de los endpoints disponibles:
 
-## 🚀 Instalación y ejecución
+Empresas
+Método	Endpoint	Descripción
+GET	/api/empresas	Lista todas las empresas
+POST	/api/empresas	Crea una nueva empresa
+PUT	/api/empresas/{id}	Edita una empresa
+DELETE	/api/empresas/{id}	Elimina una empresa
+
+Técnicos (Clientes)
+Método	Endpoint	Descripción
+GET	/api/clientes	Lista todos los técnicos
+POST	/api/clientes	Crea un técnico nuevo
+PUT	/api/clientes/{id}	Edita un técnico existente
+DELETE	/api/clientes/{id}	Elimina un técnico
+
+Asistencias Técnicas
+Método	Endpoint	Descripción
+GET	/api/asistencias	Lista todas las asistencias
+GET	/api/asistencias/paginado	Lista paginada con filtros
+POST	/api/asistencias	Registra una nueva asistenciaç
+
+ ------------------------------------------------------------------------------------------------------------------
+ 
+ 🚀 Instalación y ejecución
 
 ### 1. Clonar el repositorio
 
@@ -81,18 +117,7 @@ spring.jpa.hibernate.ddl-auto=update
 Abre index.html o empresas.html en tu navegador. El frontend se conecta al backend en http://localhost:8080/api.
 
 
-📌 Endpoints principales
-Recurso	Método	Ruta	Descripción
-Empresa	GET	/api/empresas	Listar empresas
-Empresa	POST	/api/empresas	Crear empresa
-Empresa	PUT	/api/empresas/{id}	Actualizar empresa
-Técnico	GET	/api/clientes	Listar técnicos
-Técnico	POST	/api/clientes	Crear técnico
-Técnico	PUT	/api/clientes/{id}	Actualizar técnico
-Asistencia	POST	/api/asistencias	Registrar asistencia
-Asistencia	GET	/api/asistencias	Listar asistencias
-Asistencia	GET	/api/asistencias/paginado	Asistencias con filtros y paginación
-
+------------------------------------------------------------------------------------------------------------------
 
 ✍️ Autor
 👨‍💻 Desarrollado por: Eduardo Balbuena
