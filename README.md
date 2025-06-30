@@ -1,6 +1,5 @@
 
 ![1](https://github.com/user-attachments/assets/9800ae21-6dc1-46af-8a27-bed18c82158f)
-![2](https://github.com/user-attachments/assets/442145fd-857a-4bbb-b090-d64dc9817c4f)
 
 
 # 🛠️ Sistema de Registro de Asistencias Técnicas – TechnoApp
