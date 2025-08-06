@@ -262,7 +262,7 @@ Editar
 1. **Clonar el repositorio**
 
 ```bash
-git clone https://github.com/tu-usuario/gestion.git
+git clone https://github.com/EduBDeveloper/technoapp-asistencias
 cd gestion
 Configurar la base de datos PostgreSQL
 
@@ -271,9 +271,8 @@ Crear una base de datos llamada gestiondb
 Ajustar credenciales en src/main/resources/application.properties:
 
 properties
-Copiar
-Editar
-spring.datasource.url=jdbc:postgresql://localhost:5432/gestiondb
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/gestiondb (Asegurate de poner correctanmente tus credenciales y haber creado la base de datos postgres)
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
 spring.jpa.hibernate.ddl-auto=update
