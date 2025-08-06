@@ -293,15 +293,4 @@ El frontend se conecta al backend en: http://localhost:8080/api
 🎓 Estudiante de UTIC – Sede San Lorenzo
 📫 Contacto: edubalbuena9@gmail.com
 
-yaml
-Copiar
-Editar
 
----
-
-### ✅ ¿Qué puedes hacer ahora?
-- Guarda esto como `README.md` en la raíz de tu proyecto.
-- Súbelo a tu repositorio de GitHub.
-- GitHub lo mostrará automáticamente bien renderizado en la página principal del repo.
-
-¿Quieres que te genere el archivo `.md` listo para descargar?
